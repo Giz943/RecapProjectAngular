@@ -1,0 +1,18 @@
+<div class="row mt-2">
+  <div class="col ">
+    <input type="search"  [(ngModel)]="filterText" class="form-control ml-5" placeholder="Marka Ara" />
+  </div>
+</div>
+<div class="row mt-2 mb-2">
+<div *ngIf="brands.length!=0">
+   <div class="col">
+    <button (click)="setAll()"  type="button" [class]="getBtnCss()">Tüm Markalar</button>
+  <div class="row">
+    <div *ngFor="let brand of brands |brandFilter :filterText" class="col">
+      <button (click)="setBrand(brand)"  type="button" [class]="getBtnCss()">{{brand.brandName}}</button>
+      <i  *ngIf="tokenDecord.roles[0]=='admin'" routerLink="/brandUpdate/{{brand.id}}" class="fas fa-edit btn btn-info"></i>
+     </div>
+  </div>
+   </div>
+</div>
+</div>

@@ -1,0 +1,157 @@
+<div id="my_switcher" class="my_switcher">
+  <ul>
+    <li>
+      <a
+        (click)="thmeclick('light')"
+        href="javascript: void(0);"
+        data-theme="light"
+        class="setColor light"
+      >
+        <img src="assets/images/about/sun-01.svg" alt="Sun images" /><span
+          title="Light Mode"
+        >
+          Light</span
+        >
+      </a>
+    </li>
+    <li>
+      <a
+        (click)="thmeclick('dark')"
+        href="javascript: void(0);"
+        data-theme="dark"
+        class="setColor dark"
+      >
+        <img src="assets/images/about/vector.svg" alt="Vector Images" /><span
+          title="Dark Mode"
+        >
+          Dark</span
+        >
+      </a>
+    </li>
+  </ul>
+</div>
+<!-- Start Header -->
+<header
+  class="ax-header haeder-default light-logo-version header-transparent axil-header-sticky"
+>
+  <app-navi></app-navi>
+</header>
+<!-- Start Header -->
+
+<!-- Start Page Wrapper -->
+<main class="page-wrapper">
+  <!-- Start Slider Area -->
+  <div class="axil-slider-area axil-slide-activation">
+    <!-- Start Single Slide -->
+    <div
+      style="background-size: contain"
+      class="axil-slide banner-technology bg_image bg_image--1 theme-gradient"
+    >
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-12 col-12">
+            <div class="content">
+              <div class="col"></div>
+              <div class="col">
+                   <app-car-filter-navbar></app-car-filter-navbar>
+                 </div>
+              
+              <div class="col"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Single Slide -->
+  </div>
+  <!-- End Slider Area -->
+  <!-- Start Client Logo Area  -->
+  <div
+    class="axil-client-area bg-shape-image-position bg-color-white axil-bg-oval"
+  >
+    <app-marka-area></app-marka-area>
+  </div>
+  <!-- End Client Logo Area  -->
+
+  <!-- Start Blog Area -->
+  <div class="axil-blog-area ax-section-gap bg-color-lightest">
+    <div class="container">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  <!-- End Blog Area -->
+</main>
+<!-- End Page Wrapper -->
+
+<!-- Start Footer Area -->
+<footer class="axil-footer footer-default theme-gradient-2">
+  <div class="bg_image--2">
+    <!-- Start Social Icon -->
+    <div class="ft-social-icon-wrapper ax-section-gapTop">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <ul
+              class="ft-social-share d-flex justify-content-center liststyle flex-wrap"
+            >
+              <li>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-pinterest-p"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-vimeo-v"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-dribbble"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-behance"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Social Icon -->
+
+    <!-- Start Copyright -->
+    <div class="copyright copyright-default">
+      <div class="container">
+        <div class="row row--0 ptb--20 axil-basic-thine-line">
+          <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+            <div class="inner text-center text-md-left">
+              <p>© 2020. All rights reserved by Your Company.</p>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+            <div class="quick-contact">
+              <ul
+                class="link-hover d-flex justify-content-center justify-content-md-end liststyle"
+              >
+                <li>
+                  <a data-hover="Privacy Policy" href="privacy-policy.html"
+                    >Privacy Policy</a
+                  >
+                </li>
+                <li><a href="#">Terms of Use</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Copyright -->
+  </div>
+</footer>
+<!-- End Footer Area -->

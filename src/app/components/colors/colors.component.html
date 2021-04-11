@@ -1,0 +1,19 @@
+<div class="row mt-2">
+    <div class="col ">
+      <input type="search" [(ngModel)]="filterText" class="form-control ml-5" placeholder="Renk Ara" />
+    </div>
+  </div>
+  <div class="row mt-2 mb-2">
+  <div *ngIf="colors.length!=0">
+     <div class="col">
+      <button (click)="setAll()"  type="button" [class]="getBtnCss()">Tüm Renkler</button>
+      <div class="row">
+        <div *ngFor="let color of colors |colorFilter :filterText" class="col">
+          <button (click)="setColor(color)"  type="button" [class]="getBtnCss()">{{color.colorName}}</button>
+          <i  *ngIf="tokenDecord.roles[0]=='admin'" routerLink="/colorUpdate/{{color.id}}" class="fas fa-edit btn btn-info"></i>
+         </div>
+      </div>
+    
+     </div>
+  </div>
+  </div>

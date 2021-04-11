@@ -1,0 +1,15 @@
+<div *ngIf="token==null" class="col">
+    <a routerLink="/login" class="btn btn-primary float-left m-1">Login</a>
+    <a routerLink="/register" class="btn btn-primary m-1">Register</a>
+</div>
+<div *ngIf="token!=null" class="col">
+    <div class="w3-dropdown-hover">
+        <button class="w3-button w3-white"> {{tokenDecord.firstNameLastName}}</button>
+        <div class="w3-dropdown-content w3-bar-block w3-border">
+             
+          <a routerLink="editProfile" class="w3-bar-item w3-button"><i class="fas fa-sign-out-alt"></i> Edit Profile</a>
+          <a (click)="logout()" class="w3-bar-item w3-button"><i class="fas fa-sign-out-alt"></i> LogOut</a>
+        </div>
+      </div>
+   
+</div>
